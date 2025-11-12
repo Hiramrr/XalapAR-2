@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.0/dist/aframe-extras.min.js"></script>
+    </head>
+    <body style="margin: 0; overflow: hidden">
+        <a-scene
+            embedded
+            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+        >
+            <a-marker id="markerLlama" type="pattern" url="sus.patt">
+                <a-entity
+                    id="llamaTemp"
+                    gltf-model="llama.glb"
+                    position="0 0 0"
+                    rotation="0 180 0"
+                    scale="0.02 0.02 0.02"
+                ></a-entity>
+            </a-marker>
+
+            <a-entity
+                id="camera"
+                camera
+                look-controls
+                wasd-controls
+                position="0 1.6 0"
+            ></a-entity>
+        </a-scene>
+
+        <script>
+            const marker = document.querySelector("#markerLlama");
+            const scene = document.querySelector("a-scene");
+            const camera = document.querySelector("#camera");
+            let fixedModel = null;
+
+            marker.addEventListener("markerFound", () => {
+                if (fixedModel) return;
+
+                const tempModel = document.querySelector("#llamaTemp");
+                fixedModel = tempModel.cloneNode(true);
+                const markerPos = tempModel.object3D.getWorldPosition(
+                    new THREE.Vector3(),
+                );
+                fixedModel.setAttribute(
+                    "position",
+                    `${markerPos.x} ${markerPos.y} ${markerPos.z}`,
+                );
+                scene.appendChild(fixedModel);
+            });
+
+            document.addEventListener("keydown", (e) => {
+                const pos = camera.getAttribute("position");
+                if (e.key === "q" || e.key === "Q") pos.y += 0.1; // subir
+                if (e.key === "e" || e.key === "E") pos.y -= 0.1; // bajar
+                camera.setAttribute("position", pos);
+            });
+        </script>
+    </body>
+</html>
