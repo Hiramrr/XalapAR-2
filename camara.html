@@ -52,8 +52,8 @@
 
             document.addEventListener("keydown", (e) => {
                 const pos = camera.getAttribute("position");
-                if (e.key === "q" || e.key === "Q") pos.y += 0.1; // subir
-                if (e.key === "e" || e.key === "E") pos.y -= 0.1; // bajar
+                if (e.key === "q" || e.key === "Q") pos.y += 0.1;
+                if (e.key === "e" || e.key === "E") pos.y -= 0.1;
                 camera.setAttribute("position", pos);
             });
         </script>
