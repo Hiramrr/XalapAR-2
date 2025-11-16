@@ -4,8 +4,19 @@
         <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.0/dist/aframe-extras.min.js"></script>
+        <title>Camara AR</title>
     </head>
     <body style="margin: 0; overflow: hidden">
+        <div id="infoPanel" class="info-panel">
+            <div class="header-info">
+                <h3 id="titulo">Información</h3>
+                <button class="cerrar-boton" onclick="cerrarPanel()">X</button>
+            </div>
+            <div class="contenido">
+                <iframe id="info" src=""></iframe>
+            </div>
+        </div>
+
         <a-scene
             embedded
             arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
@@ -43,12 +54,17 @@
         <script>
             const scene = document.querySelector("a-scene");
             const camera = document.querySelector("#camera");
+            const infoPanel = document.getElementById("infoPanel");
+            const iframe = document.getElementById("info");
+            const titulo = document.getElementById("titulo");
 
             const markers = [
                 {
                     id: "markerLlama",
                     modelUrl:
                         "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/llama.glb",
+                    infoUrl: "mictlantecuhtli.html",
+                    titulo: "llama",
                     position: "0 0 0",
                     rotation: "0 0 0",
                     scale: "0.02 0.02 0.02",
@@ -59,6 +75,8 @@
                     id: "markerMictlantecuhtli",
                     modelUrl:
                         "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/mictlantecuhtli.glb",
+                    infoUrl: "mictlantecuhtli.html",
+                    titulo: "mictlantecuhtli",
                     position: "0 -10 0",
                     rotation: "15 180 15",
                     scale: "10 10 10",
@@ -69,9 +87,11 @@
                     id: "markerMapa",
                     modelUrl:
                         "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/mapa.glb",
+                    infoUrl: "mictlantecuhtli.html",
+                    titulo: "Mapa",
                     position: "0 0 0",
                     rotation: "0 0 0",
-                    scale: "10 10 10",
+                    scale: "15 15 15",
                     loaded: false,
                     fixedModel: null,
                 },
@@ -105,6 +125,8 @@
                         markerConfig.loaded = true;
                     }
 
+                    abrirPanel(markerConfig.titulo, markerConfig.infoUrl);
+
                     if (!markerConfig.fixedModel && markerConfig.loaded) {
                         const tempModel = document.querySelector(
                             `#model_${markerConfig.id}`,
@@ -131,6 +153,71 @@
                 if (e.key === "e" || e.key === "E") pos.y -= 0.1;
                 camera.setAttribute("position", pos);
             });
+
+            function cerrarPanel() {
+                infoPanel.classList.remove("active");
+                iframe.src = "";
+            }
+
+            function abrirPanel(tituloTexto, url) {
+                titulo.textContent = tituloTexto;
+                iframe.src = url;
+                infoPanel.classList.add("active");
+            }
         </script>
     </body>
 </html>
+
+<style>
+    .info-panel {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 500px;
+        height: 70%;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        display: none;
+        flex-direction: column;
+        z-index: 1000;
+    }
+
+    .info-panel.active {
+        display: flex;
+    }
+
+    .info-header {
+        padding: 15px;
+        background: #333;
+        color: white;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .close-btn {
+        background: #ff4444;
+        border: none;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .info-content {
+        flex: 1;
+        overflow-y: auto;
+        padding: 0;
+    }
+
+    .info-content iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+</style>
