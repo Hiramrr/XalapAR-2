@@ -24,6 +24,13 @@
             >
             </a-marker>
 
+            <a-marker
+                id="markerMapa"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/mapa.patt"
+            >
+            </a-marker>
+
             <a-entity
                 id="camera"
                 camera
@@ -51,7 +58,17 @@
                 {
                     id: "markerMictlantecuhtli",
                     modelUrl:
-                        "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/mictlantecuhtli.glb",
+                        "https://sketchfab.com/models/84380538c0ad42b482c3f792f51189a7/download",
+                    position: "0 -10 0",
+                    rotation: "15 180 15",
+                    scale: "10 10 10",
+                    loaded: false,
+                    fixedModel: null,
+                },
+                {
+                    id: "markerMapa",
+                    modelUrl:
+                        "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/mapa.glb",
                     position: "0 0 0",
                     rotation: "0 0 0",
                     scale: "0.02 0.02 0.02",
@@ -72,12 +89,10 @@
                 }
 
                 markerElement.addEventListener("markerFound", () => {
-                    console.log(`Marcador ${markerConfig.id} detectado!`);
+                    console.log(`Marcador detectado`);
 
                     if (!markerConfig.loaded) {
-                        console.log(
-                            `Cargando modelo para ${markerConfig.id}...`,
-                        );
+                        console.log(`Cargando modelo`);
 
                         const model = document.createElement("a-entity");
                         model.setAttribute("id", `model_${markerConfig.id}`);
