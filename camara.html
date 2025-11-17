@@ -68,6 +68,7 @@
                     position: "0 0 0",
                     rotation: "0 0 0",
                     scale: "0.02 0.02 0.02",
+                    distance: 2,
                     loaded: false,
                     fixedModel: null,
                 },
@@ -77,9 +78,10 @@
                         "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/mictlantecuhtli.glb",
                     infoUrl: "mictlantecuhtli.html",
                     titulo: "Mictlantecuhtli",
-                    position: "0 -10 0",
-                    rotation: "15 180 15",
-                    scale: "10 10 10",
+                    position: "0 -0.5 0",
+                    rotation: "0 0 0",
+                    scale: "5 5 5",
+                    distance: 5,
                     loaded: false,
                     fixedModel: null,
                 },
@@ -92,58 +94,53 @@
                     position: "0 0 0",
                     rotation: "0 0 0",
                     scale: "15 15 15",
+                    distance: 5,
                     loaded: false,
                     fixedModel: null,
                 },
             ];
 
             markers.forEach((markerConfig) => {
-                const markerElement = document.querySelector(
-                    `#${markerConfig.id}`,
-                );
-                console.log("Intentando configurar marcador:", markerConfig.id);
+                const marker = document.querySelector(`#${markerConfig.id}`);
+                if (!marker) return console.warn("Marcador no encontrado");
 
-                if (!markerElement) {
-                    console.warn(`Marcador ${markerConfig.id} no encontrado`);
-                    return;
-                }
+                marker.addEventListener("markerFound", () => {
+                    if (markerConfig.fixedModel) return;
 
-                markerElement.addEventListener("markerFound", () => {
-                    console.log(`Marcador detectado`);
+                    const model = document.createElement("a-entity");
+                    model.setAttribute("id", `model_${markerConfig.id}`);
+                    model.setAttribute("gltf-model", markerConfig.modelUrl);
+                    model.setAttribute("scale", markerConfig.scale);
 
-                    if (!markerConfig.loaded) {
-                        console.log(`Cargando modelo`);
+                    const THREEAF = AFRAME.THREE;
+                    const camera = scene.camera;
 
-                        const model = document.createElement("a-entity");
-                        model.setAttribute("id", `model_${markerConfig.id}`);
-                        model.setAttribute("gltf-model", markerConfig.modelUrl);
-                        model.setAttribute("position", markerConfig.position);
-                        model.setAttribute("rotation", markerConfig.rotation);
-                        model.setAttribute("scale", markerConfig.scale);
+                    const pos = new THREEAF.Vector3();
+                    camera.getWorldPosition(pos);
 
-                        markerElement.appendChild(model);
-                        markerConfig.loaded = true;
-                    }
+                    const direction = new THREEAF.Vector3(0, 0, -1)
+                        .applyQuaternion(camera.quaternion)
+                        .multiplyScalar(markerConfig.distance);
+
+                    const offset = new THREEAF.Vector3(
+                        ...markerConfig.position.split(" ").map(Number),
+                    );
+                    pos.add(direction).add(offset);
+
+                    model.setAttribute(
+                        "position",
+                        `${pos.x} ${pos.y} ${pos.z}`,
+                    );
+
+                    const camRot = new THREEAF.Euler().setFromQuaternion(
+                        camera.quaternion,
+                    );
+
+                    scene.appendChild(model);
+                    markerConfig.fixedModel = model;
+                    markerConfig.loaded = true;
 
                     abrirPanel(markerConfig.titulo, markerConfig.infoUrl);
-
-                    if (!markerConfig.fixedModel && markerConfig.loaded) {
-                        const tempModel = document.querySelector(
-                            `#model_${markerConfig.id}`,
-                        );
-                        if (tempModel && tempModel.object3D) {
-                            markerConfig.fixedModel = tempModel.cloneNode(true);
-                            const markerPos =
-                                tempModel.object3D.getWorldPosition(
-                                    new THREE.Vector3(),
-                                );
-                            markerConfig.fixedModel.setAttribute(
-                                "position",
-                                `${markerPos.x} ${markerPos.y} ${markerPos.z}`,
-                            );
-                            scene.appendChild(markerConfig.fixedModel);
-                        }
-                    }
                 });
             });
 
@@ -157,6 +154,13 @@
             function cerrarPanel() {
                 infoPanel.classList.remove("active");
                 iframe.src = "";
+                markers.forEach((m) => {
+                    if (m.fixedModel) {
+                        m.fixedModel.parentNode.removeChild(m.fixedModel);
+                        m.fixedModel = null;
+                        m.loaded = false;
+                    }
+                });
             }
 
             function abrirPanel(tituloTexto, url) {
@@ -179,6 +183,7 @@
         transition: left 0.3s ease;
         display: flex;
         flex-direction: column;
+        z-index: 1000;
     }
 
     .info-panel.active {
