@@ -76,7 +76,7 @@
                     modelUrl:
                         "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/mictlantecuhtli.glb",
                     infoUrl: "mictlantecuhtli.html",
-                    titulo: "mictlantecuhtli",
+                    titulo: "Mictlantecuhtli",
                     position: "0 -10 0",
                     rotation: "15 180 15",
                     scale: "10 10 10",
@@ -169,18 +169,61 @@
 </html>
 
 <style>
-    .infoPanel {
-        height: 900px;
+    .info-panel {
+        position: fixed;
+        top: 0;
+        left: -420px;
         width: 400px;
-    }
-    .infoPanel.active {
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.95);
+        transition: left 0.3s ease;
         display: flex;
+        flex-direction: column;
     }
+
+    .info-panel.active {
+        left: 0;
+    }
+
+    .header-info {
+        padding: 15px;
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-info h3 {
+        margin: 0;
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .cerrar-boton {
+        background-color: #ff4444;
+        color: white;
+        border: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.2s;
+    }
+
+    .cerrar-boton:hover {
+        background-color: #cc0000;
+    }
+
+    .contenido {
+        flex: 1;
+        overflow: hidden;
+    }
+
     iframe {
-        height: 900px;
-        width: 400px;
-    }
-    iframe:active {
-        display: flex;
+        width: 100%;
+        height: 100%;
+        border: none;
     }
 </style>
