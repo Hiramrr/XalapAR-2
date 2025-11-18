@@ -100,6 +100,7 @@
                 },
             ];
 
+            // De aqui para abajo no se toca absolutamente nada - si se mueve algo 100 pesos
             markers.forEach((markerConfig) => {
                 const marker = document.querySelector(`#${markerConfig.id}`);
                 if (!marker) return console.warn("Marcador no encontrado");
