@@ -49,6 +49,13 @@
             >
             </a-marker>
 
+            <a-marker                    
+                id="markerTumbaTotonaca"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/templo%20prehispanico.patt"
+            >
+            </a-marker>
+
             <a-entity
                 id="camera"
                 camera
@@ -114,6 +121,19 @@
                     position: "0 3 0",
                     rotation: "0 0 0",
                     scale: "4 4 4",
+                    distance: 5,
+                    loaded: false,
+                    fixedModel: null,
+                },
+                {
+                    id: "markerTumbaTotonaca",
+                    modelUrl:
+                        "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/Tumba_totonaca.glb",
+                    infoUrl: "Tumba_totonaca.html",
+                    titulo: "Tumba Totonaca",
+                    position: "0 0 0",
+                    rotation: "0 0 0",
+                    scale: "1 1 1",
                     distance: 5,
                     loaded: false,
                     fixedModel: null,
