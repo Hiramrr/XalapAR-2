@@ -42,14 +42,14 @@
             >
             </a-marker>
 
-             <a-marker
+            <a-marker
                 id="markerMascara"
                 type="pattern"
                 url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/mascara.patt"
             >
             </a-marker>
 
-            <a-marker                    
+            <a-marker
                 id="markerTumbaTotonaca"
                 type="pattern"
                 url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/templo%20prehispanico.patt"
@@ -120,7 +120,7 @@
                     fixedModel: null,
                 },
                 {
-                     id: "markerMascara",
+                    id: "markerMascara",
                     modelUrl:
                         "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/Mascara_de_jade.glb",
                     infoUrl: "mascara.html",
@@ -169,13 +169,7 @@
                     if (markerConfig.fixedModel) return;
 
                     // Eliminar todos los modelos existentes antes de mostrar uno nuevo
-                    markers.forEach((m) => {
-                        if (m.fixedModel) {
-                            m.fixedModel.parentNode.removeChild(m.fixedModel);
-                            m.fixedModel = null;
-                            m.loaded = false;
-                        }
-                    });
+                    quitarModelos();
 
                     const model = document.createElement("a-entity");
                     model.setAttribute("id", `model_${markerConfig.id}`);
@@ -226,6 +220,16 @@
             function cerrarPanel() {
                 infoPanel.classList.remove("active");
                 iframe.src = "";
+                quitarModelos();
+            }
+
+            function abrirPanel(tituloTexto, url) {
+                titulo.textContent = tituloTexto;
+                iframe.src = url;
+                infoPanel.classList.add("active");
+            }
+
+            function quitarModelos() {
                 markers.forEach((m) => {
                     if (m.fixedModel) {
                         m.fixedModel.parentNode.removeChild(m.fixedModel);
@@ -233,12 +237,6 @@
                         m.loaded = false;
                     }
                 });
-            }
-
-            function abrirPanel(tituloTexto, url) {
-                titulo.textContent = tituloTexto;
-                iframe.src = url;
-                infoPanel.classList.add("active");
             }
         </script>
     </body>
