@@ -63,6 +63,13 @@
             >
             </a-marker>
 
+            <a-marker
+                id="markerZoomorfa"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/vasija_zoomorfa.patt"
+            >
+            </a-marker>
+
             <a-entity
                 id="camera"
                 camera
@@ -151,6 +158,19 @@
                         "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/Diosa_Tlazoltotl.glb",
                     infoUrl: "Diosa_Tlazototl.html",
                     titulo: "Diosa Tlazototl",
+                    position: "0 0 0",
+                    rotation: "0 0 0",
+                    scale: "1 1 1",
+                    distance: 5,
+                    loaded: false,
+                    fixedModel: null,
+                },
+                {
+                    id: "markerZoomorfa",
+                    modelUrl:
+                        "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/Recipientes_zoomorfos.glb",
+                    infoUrl: "zoomorfo.html",
+                    titulo: "Recipiente zoomorfo",
                     position: "0 0 0",
                     rotation: "0 0 0",
                     scale: "1 1 1",
