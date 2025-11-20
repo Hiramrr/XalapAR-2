@@ -56,6 +56,13 @@
             >
             </a-marker>
 
+            <a-marker
+                id="markerTlazoltetl"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/escultura%20antropomorfa.patt"
+            >
+            </a-marker>
+
             <a-entity
                 id="camera"
                 camera
@@ -131,6 +138,19 @@
                         "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/Tumba_totonaca.glb",
                     infoUrl: "Tumba_totonaca.html",
                     titulo: "Tumba Totonaca",
+                    position: "0 0 0",
+                    rotation: "0 0 0",
+                    scale: "1 1 1",
+                    distance: 5,
+                    loaded: false,
+                    fixedModel: null,
+                },
+                {
+                    id: "markerTlazoltetl",
+                    modelUrl:
+                        "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/Diosa_Tlazoltotl.glb",
+                    infoUrl: "Diosa_Tlazototl.html",
+                    titulo: "Diosa Tlazototl",
                     position: "0 0 0",
                     rotation: "0 0 0",
                     scale: "1 1 1",
