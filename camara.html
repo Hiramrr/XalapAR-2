@@ -42,6 +42,13 @@
             >
             </a-marker>
 
+             <a-marker
+                id="markerMascara"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/mascara.patt"
+            >
+            </a-marker>
+
             <a-entity
                 id="camera"
                 camera
@@ -98,6 +105,19 @@
                     loaded: false,
                     fixedModel: null,
                 },
+                {
+                     id: "markerMascara",
+                    modelUrl:
+                        "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/Mascara_de_jade.glb",
+                    infoUrl: "mascara.html",
+                    titulo: "Máscara de Jade",
+                    position: "0 3 0",
+                    rotation: "0 0 0",
+                    scale: "4 4 4",
+                    distance: 5,
+                    loaded: false,
+                    fixedModel: null,
+                },
             ];
 
             // De aqui para abajo no se toca absolutamente nada - si se mueve algo 100 pesos
@@ -107,6 +127,15 @@
 
                 marker.addEventListener("markerFound", () => {
                     if (markerConfig.fixedModel) return;
+
+                    // Eliminar todos los modelos existentes antes de mostrar uno nuevo
+                    markers.forEach((m) => {
+                        if (m.fixedModel) {
+                            m.fixedModel.parentNode.removeChild(m.fixedModel);
+                            m.fixedModel = null;
+                            m.loaded = false;
+                        }
+                    });
 
                     const model = document.createElement("a-entity");
                     model.setAttribute("id", `model_${markerConfig.id}`);
@@ -123,10 +152,12 @@
                         .applyQuaternion(camera.quaternion)
                         .multiplyScalar(markerConfig.distance);
 
-                    const offset = new THREEAF.Vector3(
-                        ...markerConfig.position.split(" ").map(Number),
-                    );
-                    pos.add(direction).add(offset);
+                    // const offset = new THREEAF.Vector3(
+                    //     ...markerConfig.position.split(" ").map(Number),
+                    // );
+                    // pos.add(direction).add(offset);
+
+                    pos.add(direction);
 
                     model.setAttribute(
                         "position",
