@@ -84,6 +84,13 @@
             >
             </a-marker>
 
+            <a-marker
+                id="markerGemelos_animal"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/hombre%20jaguar.patt"
+            >
+            </a-marker>
+
             <a-entity
                 id="camera"
                 camera
@@ -211,6 +218,19 @@
                         "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/Cabeza_con_rasgos_fantasticos.glb",
                     infoUrl: "Cabeza_con_rasgos_fantasticos.html",
                     titulo: "Cabeza con rasgos fantásticos",
+                    position: "0 0 0",
+                    rotation: "0 0 0",
+                    scale: "3 3 3",
+                    distance: 5,
+                    loaded: false,
+                    fixedModel: null,
+                },
+                {
+                    id: "markerGemelos_animal",
+                    modelUrl:
+                        "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/gemelos_animal.glb",
+                    infoUrl: "gemelos_animal.html",
+                    titulo: "Gemelos animal",
                     position: "0 0 0",
                     rotation: "0 0 0",
                     scale: "3 3 3",
