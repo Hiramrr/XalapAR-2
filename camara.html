@@ -105,6 +105,13 @@
             >
             </a-marker>
 
+            <a-market
+            id="markerCabezaColosal"
+            type="pattern"
+            url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/cabeza_colosal_3_de_san_lorenzo.patt"
+            >         
+            </a-market>
+
             <a-entity
                 id="camera"
                 camera
@@ -274,6 +281,19 @@
                     position: "0 0 0",
                     rotation: "0 0 0",
                     scale: "3 3 3",
+                    distance: 5,
+                    loaded: false,
+                    fixedModel: null,
+                },
+                {
+                    id: "markerCabezaColosal",
+                    modelUrl:
+                        "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/Cabeza_Colosal_n3.glb",
+                    infoUrl: "CabezaColosal3.html",
+                    titulo: "Cabeza Colosal 3 de San Lorenzo",
+                    position: "0 0 0",
+                    rotation: "0 0 0",
+                    scale: "2 2 2",
                     distance: 5,
                     loaded: false,
                     fixedModel: null,

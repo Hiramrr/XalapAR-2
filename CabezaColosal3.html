@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabeza Colosal 3 de San Lorenzo</title>
+    <style>
+        body {
+            background-color: #FAF3E0; /* Fondo crema muy suave */
+            font-family: 'Georgia', serif; /* Fuente clásica y legible */
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contenedor-principal {
+            max-width: 850px; /* Limita el ancho para mejor legibilidad */
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        h1 {
+            color: #5D4037; /* Marrón oscuro */
+            font-family: 'Arial Black', sans-serif;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 1.5px;
+            border-bottom: 3px solid #8D6E63;
+            padding-bottom: 15px;
+        }
+
+        figure {
+            margin: 0;
+            display: flex;
+            gap: 40px; /* Espacio entre la imagen y la descripción */
+            flex-wrap: wrap; /* Para que se apilen en pantallas pequeñas */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(93, 64, 55, 0.2);
+            border: 5px solid #EFEBE9; /* Borde claro alrededor de la imagen */
+            object-fit: cover;
+            flex-shrink: 0; /* No permite que la imagen se reduzca más de lo necesario */
+        }
+
+        figcaption {
+            flex-grow: 1; /* Permite que la descripción ocupe el espacio restante */
+        }
+
+        .seccion-detalles {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #8D6E63; /* Borde de acento para cada sección */
+            background-color: #F8F8F8; /* Fondo sutil para las secciones de detalles */
+            border-radius: 4px;
+        }
+
+        h3 {
+            color: #8D6E63; /* Color de acento para subtítulos */
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        ul {
+            list-style: none; /* Elimina las viñetas por defecto */
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Estilo para cada item de la lista (simulando párrafos pero dentro de un <ul>) */
+        li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        li strong {
+            color: #5D4037; /* Hace que las etiquetas sean más oscuras */
+            font-weight: bold;
+            display: inline-block; /* Asegura que el strong y el valor estén en la misma línea */
+            min-width: 100px; /* Alinea los valores si hay múltiples líneas, opcional */
+        }
+        
+        /* Ajuste el estilo de las p dentro de ul para usar <li> como buena práctica */
+        /* Convertiré tus <p> dentro de <ul> a <li> para una mejor estructura semántica */
+        .seccion-detalles ul p {
+            display: none; /* Oculta los p si convertimos a li */
+        }
+
+
+        .enlace-fuente {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px dashed #CCCCCC;
+            font-size: 0.9em;
+        }
+
+        .enlace-fuente strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #5D4037;
+        }
+
+        .enlace-fuente a {
+            color: #00796B; /* Un color de enlace que contraste bien */
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .enlace-fuente a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Query para pantallas pequeñas (móviles) */
+        @media (max-width: 600px) {
+            .contenedor-principal {
+                padding: 15px;
+                margin: 0 10px;
+            }
+            figure {
+                flex-direction: column; /* Apila la imagen y la descripción */
+                gap: 20px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-principal">
+        <h1>Cabeza Colosal 3 de San Lorenzo</h1>
+        <figure>
+            <img
+                src="imagenes\paginas\CabezaColosal.jpg"
+                alt="Cabeza Colosal 3 de San Lorenzo"
+                width="350"
+                height="350"
+            />
+            <figcaption>
+                <div class="seccion-detalles">
+                    <h3>CARACTERÍSTICAS DEL OBJETO</h3>
+                    <ul>
+                        <li><strong>Tipo de objeto</strong>: Escultura Monumental</li>
+                        <li><strong>Material</strong>: Basalto</li>
+                        <li><strong>Alto</strong>: 1.83 m</li>
+                        <li><strong>Ancho</strong>: 1.63 m</li>
+                        <li><strong>Peso</strong>: 12 toneladas aprox.</li>
+                        <li><strong>Rasgos distintivos</strong>: Tocado con correas. Ojos con ligero estrabismo.</li>
+                    </ul>
+                </div>
+                <div class="seccion-detalles">
+                    <h3>CARACTERÍSTICAS CULTURALES</h3>
+                    <ul>
+                        <li><strong>Cultura</strong>: Olmeca</li>
+                        <li><strong>Periodo</strong>: Preclásico Medio (1200 a.C. - 900 a.C.)</li>
+                        <li><strong>Función</strong>: Posiblemente retratos de gobernantes olmecas</li>
+                    </ul>
+                </div>
+                <div class="seccion-detalles">
+                    <h3>PROCEDENCIA</h3>
+                    <ul>
+                        <li><strong>Estado</strong>: Veracruz</li>
+                        <li><strong>Sitio</strong>: San Lorenzo Tenochtitlán</li>
+                        <li><strong>Descubrimiento</strong>: 1946 por Matthew Stirling</li>
+                    </ul>
+                </div>
+                <div class="enlace-fuente">
+                    <strong>Fuente:</strong>
+                    <a
+                        href="https://arqueologiamexicana.mx/mexico-antiguo/cabeza-colosal-3-san-lorenzo"
+                        target="_blank"
+                        >https://arqueologiamexicana.mx/mexico-antiguo/cabeza-colosal-3-san-lorenzo</a
+                    >
+                </div>
+            </figcaption>
+        </figure>
+    </div>
+</body>
+</html>
