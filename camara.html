@@ -286,11 +286,6 @@
                         .applyQuaternion(camera.quaternion)
                         .multiplyScalar(markerConfig.distance);
 
-                    // const offset = new THREEAF.Vector3(
-                    //     ...markerConfig.position.split(" ").map(Number),
-                    // );
-                    // pos.add(direction).add(offset);
-
                     pos.add(direction);
 
                     model.setAttribute(
