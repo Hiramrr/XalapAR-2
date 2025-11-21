@@ -91,6 +91,13 @@
             >
             </a-marker>
 
+            <a-marker
+                id="markerFelino"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/losa%20con%20forma%20de%20felino.patt"
+            >
+            </a-marker>
+
             <a-entity
                 id="camera"
                 camera
@@ -231,6 +238,19 @@
                         "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/gemelos_animal.glb",
                     infoUrl: "gemelos_animal.html",
                     titulo: "Gemelos animal",
+                    position: "0 0 0",
+                    rotation: "0 0 0",
+                    scale: "3 3 3",
+                    distance: 5,
+                    loaded: false,
+                    fixedModel: null,
+                },
+                {
+                    id: "markerFelino",
+                    modelUrl:
+                        "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/losa_felino.glb",
+                    infoUrl: "losaFelino.html",
+                    titulo: "Losa con forma de felino",
                     position: "0 0 0",
                     rotation: "0 0 0",
                     scale: "3 3 3",
