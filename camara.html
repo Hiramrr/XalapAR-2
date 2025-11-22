@@ -126,6 +126,13 @@
             >         
             </a-marker>
 
+             <a-marker
+            id="markerSellos"
+            type="pattern"
+            url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/sellos.patt"
+            >         
+            </a-marker>
+
 
             <a-entity
                 id="camera"
@@ -334,6 +341,20 @@
                         "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/trono.glb",
                     infoUrl: "TronoOlmeca.html",
                     titulo: "Trono Olmeca",
+                    position: "0 0 0",
+                    rotation: "0 0 0",
+                    scale: "2 2 2",
+                    distance: 5,
+                    loaded: false,
+                    fixedModel: null,
+                },
+
+                 {
+                    id: "markerSellos",
+                    modelUrl:
+                        "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/Sellos.glb",
+                    infoUrl: "Sellos.html",
+                    titulo: "Sellos",
                     position: "0 0 0",
                     rotation: "0 0 0",
                     scale: "2 2 2",
