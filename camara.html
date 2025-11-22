@@ -133,6 +133,13 @@
             >         
             </a-marker>
 
+             <a-marker
+            id="markerMono"
+            type="pattern"
+            url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/monop.patt"
+            >         
+            </a-marker>
+
 
             <a-entity
                 id="camera"
@@ -349,12 +356,26 @@
                     fixedModel: null,
                 },
 
-                 {
+                {
                     id: "markerSellos",
                     modelUrl:
                         "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/Sellos.glb",
                     infoUrl: "Sellos.html",
                     titulo: "Sellos",
+                    position: "0 0 0",
+                    rotation: "0 0 0",
+                    scale: "2 2 2",
+                    distance: 5,
+                    loaded: false,
+                    fixedModel: null,
+                },
+
+                {
+                    id: "markerMono",
+                    modelUrl:
+                        "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/mono.glb",
+                    infoUrl: "mono.html",
+                    titulo: "Mono",
                     position: "0 0 0",
                     rotation: "0 0 0",
                     scale: "2 2 2",
