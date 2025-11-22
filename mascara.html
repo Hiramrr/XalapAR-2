@@ -1,34 +1,106 @@
 <!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máscara de Jade Olmeca</title>
+    <style>
+        body {
+            background-color: #FAF3E0;
+            font-family: 'Georgia', serif;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contenedor-principal {
+            max-width: 850px;
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #5D4037;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 1.5px;
+            border-bottom: 3px solid #8D6E63;
+            padding-bottom: 15px;
+        }
+
+        figure {
+            margin: 0;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(93, 64, 55, 0.2);
+            border: 5px solid #EFEBE9;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        figcaption {
+            flex-grow: 1;
+        }
+
+        .descripcion-texto {
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: #4E342E;
+            font-size: 1.05em;
+            text-align: justify;
+        }
+
+        @media (max-width: 600px) {
+            .contenedor-principal {
+                padding: 15px;
+                margin: 0 10px;
+            }
+            figure {
+                flex-direction: column;
+                gap: 20px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-principal">
         <h1>Máscara de Jade Olmeca</h1>
         <figure>
             <img
                 src="imagenes/paginas/mascara.jpg"
                 alt="Máscara de Jade Olmeca"
-                width="300"
-                height="300"
-                style="display: block; margin: 0 auto 20px auto;"
+                width="350"
+                height="350"
             />
-            <figcaption style="text-align: left; max-width: 700px; margin: 0 auto;">
-                <p>
-                    La "máscara de jade" olmeca del Preclásico Temprano (1200 - 900 a.C.) es un objeto arqueológico significativo que representa las creencias y la jerarquía social de esta antigua cultura mesoamericana.
-                </p>
-                <p>
-                    Generalmente elaboradas en jadeíta u otras piedras verdes (como la serpentina), materiales altamente valorados en Mesoamérica por su asociación con el agua, la vegetación, el aliento vital, la fertilidad y el renacimiento.
-                </p>
-                <p>
-                    Corresponden al período Preclásico Temprano (1200 - 900 a.C.) y en algunos casos hasta el Preclásico Medio (900 - 400 a.C.).
-                </p>
+            <figcaption>
+                <div class="descripcion-texto">
+                    <p>La "máscara de jade" olmeca del Preclásico Temprano (1200 - 900 a.C.) es un objeto arqueológico significativo que representa las creencias y la jerarquía social de esta antigua cultura mesoamericana.</p>
+                    <p>Generalmente elaboradas en jadeíta u otras piedras verdes (como la serpentina), materiales altamente valorados en Mesoamérica por su asociación con el agua, la vegetación, el aliento vital, la fertilidad y el renacimiento.</p>
+                    <p>Corresponden al período Preclásico Temprano (1200 - 900 a.C.) y en algunos casos hasta el Preclásico Medio (900 - 400 a.C.).</p>
+                </div>
             </figcaption>
         </figure>
-    </body>
+    </div>
+</body>
 </html>
-
-<style>
-    h1 {
-        color: #782020;
-    }
-    body {
-        background-color: #fff3d1;
-        font-family: Arial;
-    }
-</style>

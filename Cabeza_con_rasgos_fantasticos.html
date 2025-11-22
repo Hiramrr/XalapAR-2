@@ -1,87 +1,196 @@
 <!doctype html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Cabeza con rasgos fantásticos</title>
-    </head>
-    <body>
-        <div>
-            <h1>Cabeza con rasgos fantásticos</h1>
-            <figure>
-                <img
-                    src="imagenes/paginas/cabeza fantastica con ojos cuadrangulares.jpg"
-                    alt="Cabeza con rasgos fantásticos"
-                    width="300"
-                    height="300"
-                />
-                <figcaption>
-                    <p>
-                        Descubierta en 1960 por el arqueólogo Alfonso Medellín de la Universidad Veracruzana. Es una cabeza con rasgos fantásticos común en el corpus escultórico Olmeca. En el ojo derecho aparece el elemento Olmeca de “bandas cruzadas” o “Cruz de San Andrés” y el ojo izquierdo carece de motivo alguno. También presenta la nariz ancha y un hocico rugiente a manera de los felinos con dos grandes colmillos y un diente bífido entre ellos. El rostro está enmarcado con formas sinuosas que cubren la totalidad de la cabeza. En la parte superior tiene una depresión circular, por lo que pudo funcionar como un pebetero para quemar alguna sustancia en su interior.
-                    </p>
-                    <div>
-                        <h3>CARACTERÍSTICAS DEL OBJETO</h3>
-                        <ul>
-                            <p><strong>Tipo de objeto</strong>: Escultura</p>
-                            <p><strong>Largo</strong>: 68 cm</p>
-                            <p><strong>Ancho</strong>: 68 cm</p>
-                            <p><strong>Alto</strong>: 75 cm</p>
-                            <p><strong>Diámetro</strong>: N/A</p>
-                            <p><strong>Materia prima</strong>: Piedra</p>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>CARACTERÍSTICAS CULTURALES</h3>
-                        <ul>
-                            <p><strong>Cultura</strong>: Olmeca</p>
-                            <p><strong>Temporalidad</strong>: Preclásico Tardío 400 a.C. - 200 d.C.</p>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>PROCEDENCIA</h3>
-                        <ul>
-                            <p><strong>Estado</strong>: Veracruz de Ignacio de la Llave</p>
-                            <p><strong>Municipio</strong>: Acayucan</p>
-                            <p><strong>Sitio</strong>: Laguna de los Cerros</p>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Fuente</h3>
-                        <a href="https://sapp.uv.mx/catalogomax/es-MX/sala/detalles/14" target="_blank">https://sapp.uv.mx/catalogomax/es-MX/sala/detalles/14</a>
-                    </div>
-                </figcaption>
-            </figure>
-        </div>
-    </body>
-</html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabeza con rasgos fantásticos</title>
+    <style>
+        body {
+            background-color: #FAF3E0;
+            font-family: 'Georgia', serif;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-<style>
-    h1 {
-        color: #782020;
-    }
-    body {
-        background-color: #fff3d1;
-        font-family: Arial;
-    }
-    figure {
-        margin-top: 20px;
-    }
-    figcaption {
-        margin-top: 18px;
-        color: #333;
-        font-size: 1.08em;
-    }
-    h3 {
-        color: #a13a2b;
-        margin-bottom: 8px;
-    }
-    ul {
-        margin: 0 0 12px 0;
-        padding-left: 32px;
-        list-style: none;
-    }
-    img {
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    }
-    
-</style>
+        .contenedor-principal {
+            max-width: 850px;
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #5D4037;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 1.5px;
+            border-bottom: 3px solid #8D6E63;
+            padding-bottom: 15px;
+        }
+
+        figure {
+            margin: 0;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(93, 64, 55, 0.2);
+            border: 5px solid #EFEBE9;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        figcaption {
+            flex-grow: 1;
+        }
+
+        .descripcion-texto {
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: #4E342E;
+            font-size: 1.05em;
+            text-align: justify;
+        }
+
+        .seccion-detalles {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #8D6E63;
+            background-color: #F8F8F8;
+            border-radius: 4px;
+        }
+
+        h3 {
+            color: #8D6E63;
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        li strong {
+            color: #5D4037;
+            font-weight: bold;
+            display: inline-block;
+            min-width: 100px;
+        }
+        .seccion-detalles ul p {
+            display: none;
+        }
+
+        .enlace-fuente {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px dashed #CCCCCC;
+            font-size: 0.9em;
+        }
+
+        .enlace-fuente strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #5D4037;
+        }
+
+        .enlace-fuente a {
+            color: #00796B;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .enlace-fuente a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .contenedor-principal {
+                padding: 15px;
+                margin: 0 10px;
+            }
+            figure {
+                flex-direction: column;
+                gap: 20px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-principal">
+        <h1>Cabeza con rasgos fantásticos</h1>
+        <figure>
+            <img
+                src="imagenes/paginas/cabeza fantastica con ojos cuadrangulares.jpg"
+                alt="Cabeza con rasgos fantásticos"
+                width="350"
+                height="350"
+            />
+            <figcaption>
+                <div class="descripcion-texto">
+                    <p>Descubierta en 1960 por el arqueólogo Alfonso Medellín de la Universidad Veracruzana. Es una cabeza con rasgos fantásticos común en el corpus escultórico Olmeca. En el ojo derecho aparece el elemento Olmeca de “bandas cruzadas” o “Cruz de San Andrés” y el ojo izquierdo carece de motivo alguno. También presenta la nariz ancha y un hocico rugiente a manera de los felinos con dos grandes colmillos y un diente bífido entre ellos. El rostro está enmarcado con formas sinuosas que cubren la totalidad de la cabeza. En la parte superior tiene una depresión circular, por lo que pudo funcionar como un pebetero para quemar alguna sustancia en su interior.</p>
+                </div>
+
+                <div class="seccion-detalles">
+                    <h3>CARACTERÍSTICAS DEL OBJETO</h3>
+                    <ul>
+                        <li><strong>Tipo de objeto</strong>: Escultura</li>
+                        <li><strong>Largo</strong>: 68 cm</li>
+                        <li><strong>Ancho</strong>: 68 cm</li>
+                        <li><strong>Alto</strong>: 75 cm</li>
+                        <li><strong>Diámetro</strong>: N/A</li>
+                        <li><strong>Materia prima</strong>: Piedra</li>
+                    </ul>
+                </div>
+                <div class="seccion-detalles">
+                    <h3>CARACTERÍSTICAS CULTURALES</h3>
+                    <ul>
+                        <li><strong>Cultura</strong>: Olmeca</li>
+                        <li><strong>Temporalidad</strong>: Preclásico Tardío 400 a.C. - 200 d.C.</li>
+                    </ul>
+                </div>
+                <div class="seccion-detalles">
+                    <h3>PROCEDENCIA</h3>
+                    <ul>
+                        <li><strong>Estado</strong>: Veracruz de Ignacio de la Llave</li>
+                        <li><strong>Municipio</strong>: Acayucan</li>
+                        <li><strong>Sitio</strong>: Laguna de los Cerros</li>
+                    </ul>
+                </div>
+                <div class="enlace-fuente">
+                    <strong>Fuente:</strong>
+                    <a href="https://sapp.uv.mx/catalogomax/es-MX/sala/detalles/14" target="_blank">https://sapp.uv.mx/catalogomax/es-MX/sala/detalles/14</a>
+                </div>
+            </figcaption>
+        </figure>
+    </div>
+</body>
+</html>
