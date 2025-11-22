@@ -119,6 +119,13 @@
             >         
             </a-marker>
 
+            <a-marker
+            id="markerTrono"
+            type="pattern"
+            url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/trono_olmeca.patt"
+            >         
+            </a-marker>
+
 
             <a-entity
                 id="camera"
@@ -313,6 +320,20 @@
                         "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/ave_fantastica.glb",
                     infoUrl: "AveFantastica.html",
                     titulo: "Ave Fantástica",
+                    position: "0 0 0",
+                    rotation: "0 0 0",
+                    scale: "2 2 2",
+                    distance: 5,
+                    loaded: false,
+                    fixedModel: null,
+                },
+
+                {
+                    id: "markerTrono",
+                    modelUrl:
+                        "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/trono.glb",
+                    infoUrl: "TronoOlmeca.html",
+                    titulo: "Trono Olmeca",
                     position: "0 0 0",
                     rotation: "0 0 0",
                     scale: "2 2 2",

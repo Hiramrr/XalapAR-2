@@ -56,6 +56,15 @@
             flex-grow: 1; /* Permite que la descripción ocupe el espacio restante */
         }
 
+        /* ESTILO NUEVO PARA EL PÁRRAFO AGREGADO */
+        .descripcion-texto {
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: #4E342E;
+            font-size: 1.05em;
+            text-align: justify; /* Justificado para que se vea elegante */
+        }
+
         .seccion-detalles {
             margin-bottom: 20px;
             padding: 15px;
@@ -79,7 +88,6 @@
             margin: 0;
         }
 
-        /* Estilo para cada item de la lista (simulando párrafos pero dentro de un <ul>) */
         li {
             margin-bottom: 8px;
             line-height: 1.4;
@@ -88,16 +96,13 @@
         li strong {
             color: #5D4037; /* Hace que las etiquetas sean más oscuras */
             font-weight: bold;
-            display: inline-block; /* Asegura que el strong y el valor estén en la misma línea */
-            min-width: 100px; /* Alinea los valores si hay múltiples líneas, opcional */
+            display: inline-block; 
+            min-width: 100px; 
         }
         
-        /* Ajuste el estilo de las p dentro de ul para usar <li> como buena práctica */
-        /* Convertiré tus <p> dentro de <ul> a <li> para una mejor estructura semántica */
         .seccion-detalles ul p {
-            display: none; /* Oculta los p si convertimos a li */
+            display: none; 
         }
-
 
         .enlace-fuente {
             margin-top: 30px;
@@ -122,7 +127,6 @@
             text-decoration: underline;
         }
 
-        /* Media Query para pantallas pequeñas (móviles) */
         @media (max-width: 600px) {
             .contenedor-principal {
                 padding: 15px;
@@ -144,20 +148,24 @@
 </head>
 <body>
     <div class="contenedor-principal">
-        <h1>Ave Fantastica</h1>
+        <h1>Ave Fantástica</h1>
         <figure>
             <img
                 src="imagenes\paginas\avefantastica.jpg"
-                alt="Ave Fantastica"
+                alt="Ave Fantástica"
                 width="350"
                 height="350"
             />
             <figcaption>
+                <div class="descripcion-texto">
+                    <p>Se trata de una especie de fuente descubierta por Matthew W. Stirling en 1946 con forma de ave fantástica a la que le falta la parte superior. Esta escultura estuvo integrada a un sistema hidráulico evidenciado por una abertura en forma de U que coincide con las dimensiones de los tramos de una línea de acueductos en San Lorenzo, donde fue hallada. A los costados y parte posterior de la fuente se tallaron en relieve íconos que pudieron representar elementos acuáticos.</p>
+                </div>
+
                 <div class="seccion-detalles">
                     <h3>CARACTERÍSTICAS DEL OBJETO</h3>
                     <ul>
                         <li><strong>Tipo de objeto</strong>: Escultura</li>
-                        <li><strong>Material</strong>:  Andesita</li>
+                        <li><strong>Material</strong>: Andesita</li>
                         <li><strong>Alto</strong>: 50 cm</li>
                         <li><strong>Ancho</strong>: 86 cm</li>
                         <li><strong>Largo</strong>: 87 cm</li>
@@ -175,7 +183,7 @@
                     <ul>
                         <li><strong>Estado</strong>: Veracruz</li>
                         <li><strong>Municipio</strong>: Texistepec</li>
-                        <li><strong>Sitio</strong>:  San Lorenzo Tenochtitlán</li>
+                        <li><strong>Sitio</strong>: San Lorenzo Tenochtitlán</li>
                     </ul>
                 </div>
                 <div class="enlace-fuente">
