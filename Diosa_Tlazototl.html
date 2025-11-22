@@ -1,73 +1,133 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diosa Tlazoltéotl</title>
+    <style>
+        body {
+            background-color: #FAF3E0;
+            font-family: 'Georgia', serif;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contenedor-principal {
+            max-width: 850px;
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #5D4037;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 1.5px;
+            border-bottom: 3px solid #8D6E63;
+            padding-bottom: 15px;
+        }
+
+        figure {
+            margin: 0;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(93, 64, 55, 0.2);
+            border: 5px solid #EFEBE9;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        figcaption {
+            flex-grow: 1;
+        }
+
+        .descripcion-texto {
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: #4E342E;
+            font-size: 1.05em;
+            text-align: justify;
+        }
+
+        .enlace-fuente {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px dashed #CCCCCC;
+            font-size: 0.9em;
+        }
+
+        .enlace-fuente strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #5D4037;
+        }
+
+        .enlace-fuente a {
+            color: #00796B;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .enlace-fuente a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .contenedor-principal {
+                padding: 15px;
+                margin: 0 10px;
+            }
+            figure {
+                flex-direction: column;
+                gap: 20px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="card">
+    <div class="contenedor-principal">
         <h1>Diosa Tlazoltéotl</h1>
         <figure>
             <img
                 src="imagenes/paginas/escultura antropomorfa.jpg"
                 alt="Diosa Tlazoltéotl"
-                width="300"
-                height="300"
+                width="350"
+                height="350"
             />
             <figcaption>
-                <p>
-                    Tlazoltéotl era una diosa azteca compleja que personificaba la dualidad del vicio y la purificación, asociada con la lujuria, el pecado y la carnalidad, pero también con la absolución, el parto y la fertilidad. Su nombre significa "diosa de la suciedad" y tenía el epíteto Tlaelcuani ("la que come inmundicia") porque se creía que podía purificar los pecados. Era patrona de las parteras, los baños de vapor y los adúlteros, y a menudo se la invocaba durante el parto.
-                </p>
-                <p>
-                    Su naturaleza era doble: causaba los pecados y las enfermedades venéreas, pero también ofrecía la purificación a través de sus sacerdotes y baños de vapor.
-                </p>
-                <p>
-                    El término tlazolli se traduce como "basura" o "suciedad" en náhuatl. Ella era la que "comía" el pecado y la suciedad, purgando al mundo de las transgresiones.
-                </p>
-                <p>
-                    <strong>Fuente:</strong> <a href="https://www.facebook.com/MNAinah/posts/tlazolt%C3%A9otl-era-diosa-de-la-carnalidad-y-la-lujuria-pero-tambi%C3%A9n-de-la-fecundida/2298816190152996/" target="_blank">https://www.facebook.com/MNAinah/posts/tlazolt%C3%A9otl-era-diosa-de-la-carnalidad-y-la-lujuria-pero-tambi%C3%A9n-de-la-fecundida/2298816190152996/</a>
-                </p>
+                <div class="descripcion-texto">
+                    <p>Tlazoltéotl era una diosa azteca compleja que personificaba la dualidad del vicio y la purificación, asociada con la lujuria, el pecado y la carnalidad, pero también con la absolución, el parto y la fertilidad. Su nombre significa "diosa de la suciedad" y tenía el epíteto Tlaelcuani ("la que come inmundicia") porque se creía que podía purificar los pecados. Era patrona de las parteras, los baños de vapor y los adúlteros, y a menudo se la invocaba durante el parto.</p>
+                    <p>Su naturaleza era doble: causaba los pecados y las enfermedades venéreas, pero también ofrecía la purificación a través de sus sacerdotes y baños de vapor.</p>
+                    <p>El término tlazolli se traduce como "basura" o "suciedad" en náhuatl. Ella era la que "comía" el pecado y la suciedad, purgando al mundo de las transgresiones.</p>
+                </div>
+                <div class="enlace-fuente">
+                    <strong>Fuente:</strong>
+                    <a href="https://www.facebook.com/MNAinah/posts/tlazolt%C3%A9otl-era-diosa-de-la-carnalidad-y-la-lujuria-pero-tambi%C3%A9n-de-la-fecundida/2298816190152996/" target="_blank">https://www.facebook.com/MNAinah/posts/tlazolt%C3%A9otl-era-diosa-de-la-carnalidad-y-la-lujuria-pero-tambi%C3%A9n-de-la-fecundida/2298816190152996/</a>
+                </div>
             </figcaption>
         </figure>
     </div>
 </body>
 </html>
-
-<style>
-    h1 {
-        color: #782020;
-    }
-   
-    .card {
-        background: #fff;
-        border-radius: 18px;
-        box-shadow: 0 6px 24px rgba(120,32,32,0.12), 0 1.5px 6px rgba(120,32,32,0.08);
-        padding: 36px 32px 28px 32px;
-        max-width: 540px;
-        width: 100%;
-        margin: 32px auto;
-    }
-    h1 {
-        color: #a13a2b;
-        text-align: center;
-        font-family: 'Merriweather', serif;
-        font-size: 2.2em;
-        margin-bottom: 24px;
-        letter-spacing: 1px;
-    }
-    figure {
-        margin: 0;
-        text-align: center;
-    }
-    img {
-        border-radius: 12px;
-        box-shadow: 0 4px 16px rgba(120,32,32,0.13);
-        border: 3px solid #f7e7ce;
-        margin-bottom: 18px;
-        background: #fff3d1;
-    }
-    body {
-        background-color: #fff3d1;
-        font-family: Arial;
-    }
-</style>
