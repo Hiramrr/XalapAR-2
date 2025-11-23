@@ -147,6 +147,13 @@
             >               
             </a-marker>
 
+            <m-marker
+            id="markerEsculturaSanLorenzo"
+            type="pattern"
+            url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/escultura_san_lorenzo.patt"
+            >
+            </m-marker>
+
 
             <a-entity
                 id="camera"
@@ -396,6 +403,19 @@
                         "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/Ceramica_del_posclasico.glb",
                     infoUrl: "Bacijas.html",
                     titulo: "Copas de Cerámica Policromada",
+                    position: "0 0 0",
+                    rotation: "0 0 0",
+                    scale: "2 2 2",
+                    distance: 5,
+                    loaded: false,
+                    fixedModel: null,
+                }, 
+                {
+                    id: "markerEsculturaSanLorenzo",
+                    modelUrl:
+                        "https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/modelos/gemelos.glb",
+                    infoUrl: "EsculturaSanLorenzo.html",
+                    titulo: "Cabeza Colosal No. 3 (San Lorenzo)",
                     position: "0 0 0",
                     rotation: "0 0 0",
                     scale: "2 2 2",
