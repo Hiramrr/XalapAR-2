@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pichancha o Tlalchiquihuite</title>
+    <style>
+        body {
+            background-color: #FAF3E0; /* Fondo crema muy suave */
+            font-family: 'Georgia', serif;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contenedor-principal {
+            max-width: 850px;
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #5D4037;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 1.5px;
+            border-bottom: 3px solid #8D6E63;
+            padding-bottom: 15px;
+        }
+
+        figure {
+            margin: 0;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(93, 64, 55, 0.2);
+            border: 5px solid #EFEBE9;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        figcaption {
+            flex-grow: 1;
+        }
+
+        .seccion-detalles {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #8D6E63;
+            background-color: #F8F8F8;
+            border-radius: 4px;
+        }
+
+        h3 {
+            color: #8D6E63;
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .texto-intro {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #4a4a4a;
+            font-style: italic;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        li strong {
+            color: #5D4037;
+            font-weight: bold;
+            display: inline-block;
+            min-width: 120px; /* Un poco más ancho para 'Denominación' */
+        }
+
+        .enlace-fuente {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px dashed #CCCCCC;
+            font-size: 0.9em;
+        }
+
+        .enlace-fuente strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #5D4037;
+        }
+
+        .enlace-fuente a {
+            color: #00796B;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .enlace-fuente a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .contenedor-principal {
+                padding: 15px;
+                margin: 0 10px;
+            }
+            figure {
+                flex-direction: column;
+                gap: 20px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-principal">
+        <h1>Pichancha (Tlalchiquihuite)</h1>
+        <figure>
+            <img
+                src="imagenes/paginas/pichancha.jpg"
+                alt="Pichancha prehispánica"
+                width="350"
+                height="350"
+            />
+            <figcaption>
+                
+                <div class="seccion-detalles">
+                    <h3>Descripción General</h3>
+                    <p class="texto-intro">
+                        La pichancha, conocida también como "tlalchiquihuite", es un ingenioso utensilio de barro con pequeñas perforaciones que data de la época prehispánica. Su diseño permite lavar y escurrir el nixtamal, separando el maíz del "nejayote" (agua con cal). Es un testimonio de la avanzada cultura culinaria de pueblos como los huastecos.
+                    </p>
+                </div>
+
+                <div class="seccion-detalles">
+                    <h3>Características</h3>
+                    <ul>
+                        <li><strong>Material</strong>: Barro cocido</li>
+                        <li><strong>Forma</strong>: Olla globular con perforaciones</li>
+                        <li><strong>Uso Principal</strong>: Nixtamalización (lavado de maíz)</li>
+                        <li><strong>Regiones</strong>: Veracruz (Huasteca), Oaxaca, Chiapas</li>
+                    </ul>
+                </div>
+
+                <div class="seccion-detalles">
+                    <h3>Información Adicional</h3>
+                    <ul>
+                        <li><strong>Tradición</strong>: Utilizado desde tiempos prehispánicos hasta la actualidad.</li>
+                        <li><strong>Dato Curioso</strong>: En México, el término "pichancha" también se usa en plomería para referirse a una válvula de retención, pero su origen etimológico y cultural proviene de este utensilio de cocina.</li>
+                    </ul>
+                </div>
+
+                <div class="enlace-fuente">
+                    <strong>Más información:</strong>
+                    <a
+                        href="https://www.masnoticias.mx/museo-de-antropologia-exhibe-forma-especial-utensilios-de-la-cultura-prehispanica/"
+                        target="_blank"
+                        >Museo de Antropología - Utensilios Prehispánicos</a
+                    >
+                </div>
+            </figcaption>
+        </figure>
+    </div>
+</body>
+</html>
