@@ -101,76 +101,83 @@
             <a-marker
                 id="markerPecari"
                 type="pattern"
-                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/pecari.patt"
+                url="..."
+                smooth="true"
+                smoothCount="10"
+                smoothTolerance="0.01"
+                smoothThreshold="5"
+                minConfidence="0.7"
             >
             </a-marker>
 
             <a-marker
-            id="markerCabezaColosal"
-            type="pattern"
-            url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/cabeza_colosal_3_de_san_lorenzo.patt"
-            >         
-            </a-marker>
-
-            <a-marker
-            id="markerAveFantastica"
-            type="pattern"
-            url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/ave.patt"
-            >         
-            </a-marker>
-
-            <a-marker
-            id="markerTrono"
-            type="pattern"
-            url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/trono_olmeca.patt"
-            >         
-            </a-marker>
-
-             <a-marker
-            id="markerSellos"
-            type="pattern"
-            url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/sellos.patt"
-            >         
-            </a-marker>
-
-             <a-marker
-            id="markerMono"
-            type="pattern"
-            url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/monop.patt"
-            >         
-            </a-marker>
-
-            <a-marker
-            id="markerBacijas"
-            type="pattern"
-            url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/Bacijas.patt"
-            >               
-            </a-marker>
-
-            <a-marker
-            id="markerEsculturaSanLorenzo"
-            type="pattern"
-            url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/escultura_san_lorenzo.patt"
+                id="markerCabezaColosal"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/cabeza_colosal_3_de_san_lorenzo.patt"
             >
             </a-marker>
-            
+
             <a-marker
-            id="markerFiguraPrehistoricaConRuedas"
-            type="pattern"
-            url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/figura_prehistorica_con_ruedas.patt">
+                id="markerAveFantastica"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/ave.patt"
+            >
             </a-marker>
 
             <a-marker
-            id="markerJadeiteNecklace"
-            type="pattern"
-            url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/jadeite_necklace.patt">
+                id="markerTrono"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/trono_olmeca.patt"
+            >
             </a-marker>
 
             <a-marker
-            id="markerPichancha"
-            type="pattern"
-            url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/pichancha.patt"
-            >    
+                id="markerSellos"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/sellos.patt"
+            >
+            </a-marker>
+
+            <a-marker
+                id="markerMono"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/monop.patt"
+            >
+            </a-marker>
+
+            <a-marker
+                id="markerBacijas"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/Bacijas.patt"
+            >
+            </a-marker>
+
+            <a-marker
+                id="markerEsculturaSanLorenzo"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/escultura_san_lorenzo.patt"
+            >
+            </a-marker>
+
+            <a-marker
+                id="markerFiguraPrehistoricaConRuedas"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/figura_prehistorica_con_ruedas.patt"
+            >
+            </a-marker>
+
+            <a-marker
+                id="markerJadeiteNecklace"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/jadeite_necklace.patt"
+            >
+            </a-marker>
+
+            <a-marker
+                id="markerPichancha"
+                type="pattern"
+                url="https://cdn.jsdelivr.net/gh/Hiramrr/XalapAR-2@main/patt/pichancha.patt"
+            >
             </a-marker>
 
             <a-entity
@@ -427,7 +434,7 @@
                     distance: 5,
                     loaded: false,
                     fixedModel: null,
-                }, 
+                },
                 {
                     id: "markerEsculturaSanLorenzo",
                     modelUrl:
@@ -479,8 +486,7 @@
                     distance: 5,
                     loaded: false,
                     fixedModel: null,
-                }
-
+                },
             ];
 
             // De aqui para abajo no se toca absolutamente nada - si se mueve algo 100 pesos
